@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/records/static/css/main.d9f0fa94.css",
+    "main.js": "/records/static/js/main.cbeac5f4.js",
+    "index.html": "/records/index.html",
+    "static/media/Rolling-1s-71px.svg": "/records/static/media/Rolling-1s-71px.4f4c9c928642b68853dcc9c361a2ab18.svg",
+    "main.d9f0fa94.css.map": "/records/static/css/main.d9f0fa94.css.map",
+    "main.cbeac5f4.js.map": "/records/static/js/main.cbeac5f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9f0fa94.css",
+    "static/js/main.cbeac5f4.js"
+  ]
+}
