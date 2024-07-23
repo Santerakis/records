@@ -87,9 +87,10 @@ export const ChartPage = () => {
 
   return (
     <>
+        <div className={'fields'}>
       <select
         title="Выберите страну"
-        style={{ width: "100px" }}
+        style={{ width: "150px" }}
         onChange={(e) => {
           setChartCountry(e.currentTarget.value);
         }}
@@ -97,6 +98,7 @@ export const ChartPage = () => {
       >
         {mappedOptionsforChart}
       </select>
+        </div>
 
       <div className={"graph-container"}>
         <div className="y-axis-label">Случаи</div>
