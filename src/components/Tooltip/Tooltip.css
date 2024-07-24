@@ -1,0 +1,38 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Позиционируем подсказку снизу элемента */
+    left: 50%;
+    margin-left: -60px; /* Смещаем подсказку влево на половину её ширины */
+    opacity: 0;
+    transition: opacity 0.3s;
+    visibility: hidden;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* Располагаем стрелку вверху подсказки */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent; /* Создаем стрелку */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

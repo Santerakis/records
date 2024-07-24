@@ -9,9 +9,10 @@ const Loader = () => {
         // top: "30%",
         textAlign: "center",
         width: "100%",
+        marginTop: "10px",
       }}
     >
-      <img src={loader} alt="Loading..." />
+      {/*<img src={loader} alt="Loading..." />*/}
       нет данных 📋
     </div>
   );

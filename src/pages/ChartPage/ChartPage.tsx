@@ -37,9 +37,10 @@ export const ChartPage = () => {
   const { filteredByDate } = useOutletContext<ContextType>();
 
   const chartDataForCountry = chartFormatAndSum(filteredByDate, chartCountry);
-  const mappedOptionsforChart = createOptions(countries, [
-    { value: "sum", title: "Все страны" },
-  ]);
+  const mappedOptionsforChart = createOptions(
+    [{ value: "sum", title: "Все страны" }],
+    countries,
+  );
 
   const option = {
     // responsive: true,
@@ -63,7 +64,7 @@ export const ChartPage = () => {
     // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9],
     datasets: [
       {
-        label: "Cases",
+        label: "Случаи",
         data: chartDataForCountry.map((data) => data.cases),
         // data: [0, 9, 5, 7, 8, 10, 9, 7, 5],
         borderColor: "black",
@@ -74,7 +75,7 @@ export const ChartPage = () => {
         // tension: 0.4,
       },
       {
-        label: "Deaths",
+        label: "Смерти",
         data: chartDataForCountry.map((data) => data.deaths),
         // data: [0, 9, 5, 7, 8, 10, 9, 7, 5],
         borderColor: "red",
@@ -87,18 +88,18 @@ export const ChartPage = () => {
 
   return (
     <>
-        <div className={'fields'}>
-      <select
-        title="Выберите страну"
-        style={{ width: "150px" }}
-        onChange={(e) => {
-          setChartCountry(e.currentTarget.value);
-        }}
-        value={chartCountry}
-      >
-        {mappedOptionsforChart}
-      </select>
-        </div>
+      <div className={"fields"}>
+        <select
+          title="Выберите страну"
+          style={{ width: "150px" }}
+          onChange={(e) => {
+            setChartCountry(e.currentTarget.value);
+          }}
+          value={chartCountry}
+        >
+          {mappedOptionsforChart}
+        </select>
+      </div>
 
       <div className={"graph-container"}>
         <div className="y-axis-label">Случаи</div>
