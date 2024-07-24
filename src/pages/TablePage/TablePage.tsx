@@ -74,7 +74,10 @@ export const TablePage = () => {
 
         <Tooltip text={"Фильтровть по колоне таблицы или сбрость фильтр"}>
           <select
-            style={{ width: "130px" }}
+            style={{
+              width: "130px",
+              background: rangeValue !== "" ? "#f9fad5" : "",
+            }}
             onChange={(e) => {
               setRangeValue(e.currentTarget.value as keyof CountryData);
               setPageNumber(1);

@@ -1,11 +1,15 @@
 .table {
   border-collapse: collapse;
   //width: 700px;
-  //width: 100%;
+  width: 100%;
   table-layout: fixed;
 
-  .tr {
+  .trEven {
     background: #fff2f2;
+  }
+
+  .trOdd {
+    background: #f5e9e9;
   }
 
   .th {

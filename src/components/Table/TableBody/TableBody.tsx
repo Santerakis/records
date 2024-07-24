@@ -11,7 +11,7 @@ export const TableBody = ({ tableData }: TableBody) => {
   return (
     <tbody>
       {tableData.map((country, index) => (
-        <tr key={index} className={index % 2 === 0 ? "" : "tr"}>
+        <tr key={index} className={index % 2 === 0 ? "trEven" : "trOdd"}>
           <td title={country.country} className="td">
             {formatCountryNames(country.country)}
           </td>
